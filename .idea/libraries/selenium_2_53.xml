@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="selenium-2.53">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Downloads/selenium-2.53.0/selenium-java-2.53.0.jar!/" />
+      <root url="file://$USER_HOME$/Downloads/selenium-2.53.0" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/Downloads/selenium-2.53.0/selenium-java-2.53.0-srcs.jar!/" />
+      <root url="file://$USER_HOME$/Downloads/selenium-2.53.0" />
+    </SOURCES>
+    <jarDirectory url="file://$USER_HOME$/Downloads/selenium-2.53.0" recursive="false" />
+    <jarDirectory url="file://$USER_HOME$/Downloads/selenium-2.53.0" recursive="false" type="SOURCES" />
+  </library>
+</component>
