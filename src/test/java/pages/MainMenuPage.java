@@ -1,5 +1,6 @@
 package pages;
 
+import io.appium.java_client.TouchAction;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -45,5 +46,16 @@ public class MainMenuPage extends AbstractPage {
     public void logOutPopUpOkButtonClick(){logOutPopUpOkButton.click();}
 
     public void logOutPopUpCancelButtonClick(){logOutPopUpCancelButton.click();}
+
+    public void logOutClick() throws Exception{
+        try {
+            TouchAction ta = new TouchAction(driver);
+            ta = ta.press(100,100).perform();
+        }catch (Exception e){
+
+        }
+
+    }
+
 
 }

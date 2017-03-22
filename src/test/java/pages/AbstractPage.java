@@ -1,6 +1,9 @@
 package pages;
 
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.TouchAction;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
 import java.util.Random;
 
@@ -49,21 +52,25 @@ public class AbstractPage {
         return driver.getCurrentUrl();
     }
 
-//    public static void Tap(this AppiumDriver driver, Location location)
-//    {
-//        if (driver == null)
-//        {
-//            throw new ArgumentNullException("driver");
-//        }
-//
-//        if (location == null)
-//        {
-//            throw new ArgumentNullException("location");
-//        }
-//
-//        ITouchAction action = new TouchAction(driver).Tap(location.X, location.Y);
-//        action.Perform();
-//    }
+    public int tapOnLogOut(String className) throws InterruptedException{
+        WebElement element = driver.findElement(By.className("android.widget.LinearLayout"));
+        org.openqa.selenium.Point point = element.getLocation();
+        //capturing height & length of the element
+
+        int length = element.getSize().getWidth();
+        int height = element.getSize().getHeight();
+
+        //capturing the stating Y co-ordinate
+
+        int getY = point.getY();
+
+        //moving to the middle of the suggestion from the Y co-ordinate
+        int middleY = (int) (getY + height * 1.5);
+        TouchAction ta = new TouchAction(driver);
+        Thread.sleep(1000);
+        ta.tap(length / 2, middleY).perform();
+        return middleY;
+    }
 
 
 

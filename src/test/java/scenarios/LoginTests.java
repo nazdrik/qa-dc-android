@@ -12,7 +12,7 @@ import static org.hamcrest.core.Is.is;
 public class LoginTests extends TestBase {
 
     @Test
-    public void logInWithValidEmail() {
+    public void logInWithValidEmail() throws Exception{
         //login as a Dealer with correct data
         landing.sleep();
         landing.loginButtonClick();
@@ -24,6 +24,7 @@ public class LoginTests extends TestBase {
         landing.menuIconclick();
         mainMenu.logoIconClick();
         mainMenu.sleep();
+        mainMenu.logOutClick();
 
 //        mainMenu.logOutLinkClick();
 //        mainMenu.sleep();
