@@ -62,4 +62,6 @@ public class LoginPage extends AbstractPage {
 
     public void loginButtonClick(){logInButton.click();}
 
+    public void invalidPopUpOKButtonClick(){invalidPopUpOKButton.click();}
+
 }

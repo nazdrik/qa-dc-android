@@ -5,6 +5,7 @@ import io.appium.java_client.android.AndroidDriver;
 import org.junit.Before;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.AfterTest;
 import pages.LandingPage;
 import pages.LoginPage;
 import pages.MainMenuPage;
@@ -45,7 +46,8 @@ public class TestBase {
     }
 
 
-//    @After
-//    public void tearDown() throws Exception {driver.quit();}
+    @AfterTest
+    public void tearDown() throws Exception {driver.quit();
+    }
 
 }
