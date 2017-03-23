@@ -24,12 +24,10 @@ public class LoginTests extends TestBase {
         landing.menuIconclick();
         mainMenu.logoIconClick();
         mainMenu.sleep();
-        mainMenu.logOutClick();
-
-//        mainMenu.logOutLinkClick();
-//        mainMenu.sleep();
-//        mainMenu.logOutPopUpOkButtonClick();
-//        assertThat("Landing page is opened and user can log in again", landing.isLogoDisplayed(), is(true));
+        mainMenu.logOutLinkClick();
+        mainMenu.sleep();
+        mainMenu.logOutPopUpOkButtonClick();
+        assertThat("Landing page is opened and user can log in again", landing.isLogoDisplayed(), is(true));
 
 
     }
