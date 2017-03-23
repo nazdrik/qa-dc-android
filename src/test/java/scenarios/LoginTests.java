@@ -30,53 +30,53 @@ public class LoginTests extends TestBase {
         mainMenu.logOutPopUpOkButtonClick();
         assertThat("Landing page is opened and user can log in again", landing.isLogoDisplayed(), is(true));
 
-        //login as a Designer with correct data
-        landing.sleep();
-        landing.loginButtonClick();
-        login.FillingEmailTextField(Constants.CORRECT_DESIGNER_NAME);
-        login.FillingPasswordTextField(Constants.CORRECT_PASSWORD);
-        login.loginButtonClick();
-        landing.sleep();
-        assertThat("Designer logs in successfully", landing.isLogoDisplayed(), is(true));
-        landing.menuIconclick();
-        mainMenu.logoIconClick();
-        mainMenu.sleep();
-        mainMenu.logOutLinkClick();
-        mainMenu.sleep();
-        mainMenu.logOutPopUpOkButtonClick();
-        assertThat("Landing page is opened and user can log in again", landing.isLogoDisplayed(), is(true));
-
-        //login as a Artist with correct data
-        landing.sleep();
-        landing.loginButtonClick();
-        login.FillingEmailTextField(Constants.CORRECT_ARTIST_NAME);
-        login.FillingPasswordTextField(Constants.CORRECT_PASSWORD);
-        login.loginButtonClick();
-        landing.sleep();
-        assertThat("Artist logs in successfully", landing.isLogoDisplayed(), is(true));
-        landing.menuIconclick();
-        mainMenu.logoIconClick();
-        mainMenu.sleep();
-        mainMenu.logOutLinkClick();
-        mainMenu.sleep();
-        mainMenu.logOutPopUpOkButtonClick();
-        assertThat("Landing page is opened and user can log in again", landing.isLogoDisplayed(), is(true));
-
-        //login as a Art Consultant with correct data
-        landing.sleep();
-        landing.loginButtonClick();
-        login.FillingEmailTextField(Constants.CORRECT_ART_CONSULTACT_NAME);
-        login.FillingPasswordTextField(Constants.CORRECT_PASSWORD);
-        login.loginButtonClick();
-        landing.sleep();
-        assertThat("Art Consultant logs in successfully", landing.isLogoDisplayed(), is(true));
-        landing.menuIconclick();
-        mainMenu.logoIconClick();
-        mainMenu.sleep();
-        mainMenu.logOutLinkClick();
-        mainMenu.sleep();
-        mainMenu.logOutPopUpOkButtonClick();
-        assertThat("Landing page is opened and user can log in again", landing.isLogoDisplayed(), is(true));
+//        //login as a Designer with correct data
+//        landing.sleep();
+//        landing.loginButtonClick();
+//        login.FillingEmailTextField(Constants.CORRECT_DESIGNER_NAME);
+//        login.FillingPasswordTextField(Constants.CORRECT_PASSWORD);
+//        login.loginButtonClick();
+//        landing.sleep();
+//        assertThat("Designer logs in successfully", landing.isLogoDisplayed(), is(true));
+//        landing.menuIconclick();
+//        mainMenu.logoIconClick();
+//        mainMenu.sleep();
+//        mainMenu.logOutLinkClick();
+//        mainMenu.sleep();
+//        mainMenu.logOutPopUpOkButtonClick();
+//        assertThat("Landing page is opened and user can log in again", landing.isLogoDisplayed(), is(true));
+//
+//        //login as a Artist with correct data
+//        landing.sleep();
+//        landing.loginButtonClick();
+//        login.FillingEmailTextField(Constants.CORRECT_ARTIST_NAME);
+//        login.FillingPasswordTextField(Constants.CORRECT_PASSWORD);
+//        login.loginButtonClick();
+//        landing.sleep();
+//        assertThat("Artist logs in successfully", landing.isLogoDisplayed(), is(true));
+//        landing.menuIconclick();
+//        mainMenu.logoIconClick();
+//        mainMenu.sleep();
+//        mainMenu.logOutLinkClick();
+//        mainMenu.sleep();
+//        mainMenu.logOutPopUpOkButtonClick();
+//        assertThat("Landing page is opened and user can log in again", landing.isLogoDisplayed(), is(true));
+//
+//        //login as a Art Consultant with correct data
+//        landing.sleep();
+//        landing.loginButtonClick();
+//        login.FillingEmailTextField(Constants.CORRECT_ART_CONSULTACT_NAME);
+//        login.FillingPasswordTextField(Constants.CORRECT_PASSWORD);
+//        login.loginButtonClick();
+//        landing.sleep();
+//        assertThat("Art Consultant logs in successfully", landing.isLogoDisplayed(), is(true));
+//        landing.menuIconclick();
+//        mainMenu.logoIconClick();
+//        mainMenu.sleep();
+//        mainMenu.logOutLinkClick();
+//        mainMenu.sleep();
+//        mainMenu.logOutPopUpOkButtonClick();
+//        assertThat("Landing page is opened and user can log in again", landing.isLogoDisplayed(), is(true));
 
     }
 
