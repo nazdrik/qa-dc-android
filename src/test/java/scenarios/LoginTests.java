@@ -1,6 +1,6 @@
 package scenarios;
 
-import org.junit.Test;
+import org.testng.annotations.Test;
 import utility.Constants;
 
 import static junit.framework.TestCase.assertTrue;
@@ -12,7 +12,7 @@ import static org.hamcrest.core.Is.is;
  */
 public class LoginTests extends TestBase {
 
-    @Test
+    @Test(priority = 1, alwaysRun = true)
     public void logInWithValidEmail() throws Exception{
         //login as a Dealer with correct data
         landing.sleep();
@@ -80,7 +80,7 @@ public class LoginTests extends TestBase {
 
     }
 
-    @Test
+    @Test(priority = 2, alwaysRun = true)
     public void logInWithInvalidEmail() throws Exception {
         // Trying to log in with incorrect username
         landing.sleep();

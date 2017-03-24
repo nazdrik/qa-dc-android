@@ -2,10 +2,10 @@ package scenarios;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
-import org.junit.After;
-import org.junit.Before;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import pages.LandingPage;
 import pages.LoginPage;
 import pages.MainMenuPage;
@@ -27,10 +27,12 @@ public class TestBase {
 
 
 
-    @Before
+    @BeforeMethod
     public void beforeAllTests() throws Exception {
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability("noReset","true");
+      //  capabilities.setCapability("fullReset","false");
         capabilities.setCapability("deviceName", "AndroidTestDevice");
         capabilities.setCapability("unicodeKeyboard", true);
         capabilities.setCapability("resetKeyboard", true);
@@ -46,14 +48,10 @@ public class TestBase {
     }
 
 
-    @After
-    public void tearDown() throws Exception {
-        try {
+    @AfterMethod
+    public void teardown() {
+        if (driver != null)
             driver.quit();
-        }catch (Exception e){
-            driver.closeApp();
-        }
-
     }
 
 }
