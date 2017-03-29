@@ -12,7 +12,7 @@ public class LoginPage extends AbstractPage {
     private WebElement appLogo;
 
     @FindBy(id = "com.designcarta.designcarta:id/btnOk")
-    private WebElement appInfoOKButton;
+    private WebElement oKButton;
 
     @FindBy(id = "com.designcarta.designcarta:id/edtLogin")
     private WebElement emailTextField;
@@ -35,9 +35,6 @@ public class LoginPage extends AbstractPage {
     @FindBy(id = "com.designcarta.designcarta:id/btnContactDC")
     private WebElement requestAnAccountButton;
 
-    @FindBy(id = "com.designcarta.designcarta:id/btnOk")
-    private WebElement invalidPopUpOKButton;
-
     @FindBy(id = "com.designcarta.designcarta:id/btnActionLeftImage")
     private WebElement closeButton;
 
@@ -45,27 +42,35 @@ public class LoginPage extends AbstractPage {
     private WebElement forgotPasswordTextField;
 
     @FindBy(id = "com.designcarta.designcarta:id/btnLeft")
-    private WebElement CancelButton;
-
-    @FindBy(id = "com.designcarta.designcarta:id/btnOk")
-    private WebElement forgotPasswordSendButton;
-
+    private WebElement cancelButton;
 
     @FindBy(id = "com.designcarta.designcarta:id/btnRight")
     private WebElement contactUsButton;
 
 
 
-    public void FillingEmailTextField(String email){emailTextField.sendKeys(email);}
+    public void fillingEmailTextField(String email){emailTextField.sendKeys(email);}
 
-    public void ClearEmailTextField(){emailTextField.clear();}
+    public void clearEmailTextField(){emailTextField.clear();}
 
-    public void FillingPasswordTextField(String email){passwordTextField.sendKeys(email);}
+    public void fillingPasswordTextField(String email){passwordTextField.sendKeys(email);}
 
-    public void ClearPasswordTextField(){passwordTextField.clear();}
+    public void clearPasswordTextField(){passwordTextField.clear();}
 
     public void loginButtonClick(){logInButton.click();}
 
-    public void invalidPopUpOKButtonClick(){invalidPopUpOKButton.click();}
+    public void invalidPopUpOKButtonClick(){oKButton.click();}
+
+    public void forgotPasswordClick(){forgotPasswordButton.click();}
+
+    public void fillingForgotPasswordTextField(String email){forgotPasswordTextField.sendKeys(email);}
+
+    public void clickOkButton(){oKButton.click();}
+
+    public void cancelButtonClick(){cancelButton.click();}
+
+    public void contactUsButtonClick(){contactUsButton.click();}
+
+    public Boolean isContactButtonPresent(){return contactUsButton.isDisplayed();}
 
 }
