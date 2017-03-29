@@ -18,7 +18,6 @@ public class InvalidLoginTest extends TestBase {
         login.fillingEmailTextField(Constants.INCORRECT_NAME);
         login.fillingPasswordTextField(Constants.CORRECT_PASSWORD);
         login.loginButtonClick();
-        landing.sleep();
         assertTrue("Error message appears", Constants.LOGIN_ERROR_MESSAGE_TEXT.contains("Please try again and use your phone number as your user name if your email was not accepted."));
         login.invalidPopUpOKButtonClick();
 
@@ -29,7 +28,6 @@ public class InvalidLoginTest extends TestBase {
         login.fillingEmailTextField(Constants.CORRECT_DEALER_NAME);
         login.fillingPasswordTextField(Constants.INCORRECT_PASSWORD);
         login.loginButtonClick();
-        landing.sleep();
         assertTrue("Error message appears", Constants.LOGIN_ERROR_MESSAGE_TEXT.contains("Please try again and use your phone number as your user name if your email was not accepted."));
         login.invalidPopUpOKButtonClick();
 
