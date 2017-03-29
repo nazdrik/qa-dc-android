@@ -14,6 +14,7 @@ public class Constants {
     public static final String CORRECT_ART_CONSULTACT_NAME = "nazdrik1@binka.me";
     public static final String INCORRECT_NAME = "incorrect@lackmail.ru";
     public static final String CORRECT_PASSWORD = "123456";
+    public static final String INCORRECT_PASSWORD = "123456pas";
     public static final String LOG_OUT_POP_UP_TEXT = "Log out";
 
 }

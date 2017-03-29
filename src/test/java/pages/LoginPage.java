@@ -58,7 +58,11 @@ public class LoginPage extends AbstractPage {
 
     public void FillingEmailTextField(String email){emailTextField.sendKeys(email);}
 
+    public void ClearEmailTextField(){emailTextField.clear();}
+
     public void FillingPasswordTextField(String email){passwordTextField.sendKeys(email);}
+
+    public void ClearPasswordTextField(){passwordTextField.clear();}
 
     public void loginButtonClick(){logInButton.click();}
 

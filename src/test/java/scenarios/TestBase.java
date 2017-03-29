@@ -31,7 +31,7 @@ public class TestBase {
     public void beforeAllTests() throws Exception {
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("noReset","true");
+        //capabilities.setCapability("noReset","true");
       //  capabilities.setCapability("fullReset","false");
         capabilities.setCapability("deviceName", "AndroidTestDevice");
         capabilities.setCapability("unicodeKeyboard", true);
