@@ -19,5 +19,8 @@ public class Constants {
     public static final String CORRECT_PASSWORD = "123456";
     public static final String INCORRECT_PASSWORD = "123456pas";
     public static final String LOG_OUT_POP_UP_TEXT = "Log out";
+    public static final String REQUEST_AN_ACCOUNT_TITLE = "Request an account";
+    public static final String REQUEST_COMPANY_NAME = "Request an account";
+
 
 }

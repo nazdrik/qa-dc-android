@@ -22,11 +22,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="qa-dc-maven" />
+        <module name="dc-maven" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="qa-dc-maven" target="1.5" />
+      <module name="dc-maven" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

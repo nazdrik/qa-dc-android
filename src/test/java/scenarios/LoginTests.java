@@ -9,7 +9,7 @@ import static org.hamcrest.core.Is.is;
 /**
  * Created by alexey on 22/03/17.
  */
-public class loginTests extends TestBase {
+public class LoginTests extends TestBase {
 
     @Test(priority = 1, alwaysRun = true)
     public void logInWithValidEmail() throws Exception{

@@ -9,6 +9,7 @@ import org.testng.annotations.BeforeMethod;
 import pages.LandingPage;
 import pages.LoginPage;
 import pages.MainMenuPage;
+import pages.RequestAnAccountPage;
 
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
@@ -22,7 +23,7 @@ public class TestBase {
     public LoginPage login;
     public LandingPage landing;
     public MainMenuPage mainMenu;
-
+    public RequestAnAccountPage RequestAnAccount;
 
 
 
@@ -44,6 +45,7 @@ public class TestBase {
         landing = PageFactory.initElements(driver, LandingPage.class);
         login = PageFactory.initElements(driver, LoginPage.class);
         mainMenu = PageFactory.initElements(driver, MainMenuPage.class);
+        RequestAnAccount = PageFactory.initElements(driver, RequestAnAccountPage.class);
 
     }
 

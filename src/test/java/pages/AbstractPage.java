@@ -39,14 +39,19 @@ public class AbstractPage {
         driver.navigate().back();
     }
 
-    public String random(){
+    public String randomNumber(){
         Random random = new Random();
         // String number = Integer.toString(random.nextInt(Integer.MAX_VALUE)+1);
-        String number = Integer.toString(random.nextInt(1000));
+        String number = Integer.toString(random.nextInt(1000000000));
         return number;
-
     }
 
+    public String randomEmail(){
+        Random random = new Random();
+        int number = random.nextInt(1000);
+        String randoms = String.format("%03d", number);
+        return randoms;
+    }
 
     public String pageURL(){
         return driver.getCurrentUrl();
