@@ -30,6 +30,25 @@ public class MainMenuPage extends AbstractPage {
     @FindBy(id = "com.designcarta.designcarta.dev:id/btnNo")
     private WebElement logOutPopUpCancelButton;
 
+    @FindBy(id = "com.designcarta.designcarta.dev:id/txtAccountAdmin")
+    private WebElement accountAdmin;
+
+    @FindBy(id = "com.designcarta.designcarta.dev:id/btnPostAFind")
+    private WebElement postAnItem;
+
+    @FindBy(id = "com.designcarta.designcarta.dev:id/btnMyPostedFinds")
+    private WebElement myPostedItems;
+
+    @FindBy(id = "com.designcarta.designcarta.dev:id/btnViewStoreFront")
+    private WebElement viewStoreFront;
+
+    @FindBy(id = "com.designcarta.designcarta.dev:id/btnEditStoreInfo")
+    private WebElement profileInfo;
+
+    @FindBy(id = "com.designcarta.designcarta.dev:id/btnNewArrivalsSchedule")
+    private WebElement enterArrivalsSchedule;
+
+
 
 
     public void logoIconClick(){logoIcon.click();}
@@ -52,20 +71,21 @@ public class MainMenuPage extends AbstractPage {
 
     public void logOutPopUpCancelButtonClick(){logOutPopUpCancelButton.click();}
 
-//    public void logOutClick() throws Exception{
-//        try {
-//            TouchAction ta = new TouchAction(driver);
-//           // ta = ta.press(100,100).perform();
-//          //  ta = ta.tap(85,1045).perform();
-//         // ta = ta.press(logOutLink, 85,1045).perform();
-//        //    ta.tap(logOutLink, 85,1045).perform();
-//            ta = ta.tap(0, 976).release();
-//
-//        }catch (Exception e){
-//            System.out.println("unable to click ");
-//        }
+    public void accountAdminClick(){accountAdmin.click();}
 
-    }
+    public void postAnItemClick(){postAnItem.click();}
+
+    public void myPostedItemsClick(){myPostedItems.click();}
+
+    public void viewStoreFrontClick(){viewStoreFront.click();}
+
+    public void profileInfoClick(){profileInfo.click();}
+
+    public void enterArrivalsScheduleClick(){enterArrivalsSchedule.click();}
+
+
+
+}
 
 
 

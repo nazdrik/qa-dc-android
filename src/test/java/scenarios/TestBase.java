@@ -6,10 +6,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import pages.LandingPage;
-import pages.LoginPage;
-import pages.MainMenuPage;
-import pages.RequestAnAccountPage;
+import pages.*;
 
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
@@ -23,7 +20,10 @@ public class TestBase {
     public LoginPage login;
     public LandingPage landing;
     public MainMenuPage mainMenu;
-    public RequestAnAccountPage RequestAnAccount;
+    public RequestAnAccountPage requestAnAccount;
+    public EnterArrivalsSchedulePage enterSchedule;
+    public AddShipmentPage addShipment;
+    public EditShipmentInfoPage editShipment;
 
 
 
@@ -45,7 +45,10 @@ public class TestBase {
         landing = PageFactory.initElements(driver, LandingPage.class);
         login = PageFactory.initElements(driver, LoginPage.class);
         mainMenu = PageFactory.initElements(driver, MainMenuPage.class);
-        RequestAnAccount = PageFactory.initElements(driver, RequestAnAccountPage.class);
+        requestAnAccount = PageFactory.initElements(driver, RequestAnAccountPage.class);
+        enterSchedule = PageFactory.initElements(driver, EnterArrivalsSchedulePage.class );
+        addShipment = PageFactory.initElements(driver, AddShipmentPage.class );
+        editShipment = PageFactory.initElements(driver, EditShipmentInfoPage.class );
 
     }
 

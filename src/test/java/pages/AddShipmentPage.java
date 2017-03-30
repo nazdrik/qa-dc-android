@@ -35,6 +35,8 @@ public class AddShipmentPage extends AbstractPage {
 
     public void oKButtonClick(){oKButton.click();}
 
+    public void inStoreExclusiveUntilClick(){inStoreExclusiveUntilField.click();}
+
     public void approxNumOfItemsFieldFillingIn(String approxNum){approxNumOfItemsField.sendKeys(approxNum);}
 
     public void inStoreExclusiveUntilFieldFillingIn(String inStoreExcl){inStoreExclusiveUntilField.sendKeys(inStoreExcl);}

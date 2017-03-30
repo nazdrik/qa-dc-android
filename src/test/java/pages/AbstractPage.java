@@ -42,15 +42,35 @@ public class AbstractPage {
     public String randomNumber(){
         Random random = new Random();
         // String number = Integer.toString(random.nextInt(Integer.MAX_VALUE)+1);
-        String number = Integer.toString(random.nextInt(1000000000));
+        String number = Integer.toString(random.nextInt(1000));
         return number;
     }
 
     public String randomEmail(){
         Random random = new Random();
-        int number = random.nextInt(1000);
-        String randoms = String.format("%03d", number);
-        return randoms;
+        String number = Integer.toString(random.nextInt(Integer.MAX_VALUE) + 1);
+        String email = "nazdrik"+ number + "@gmail.com" ;
+        return email;
+    }
+
+    public String randomPhone(){
+        Random random = new Random();
+        String number = Integer.toString(random.nextInt(1000000));
+        String phone = "38066" + number;
+        return phone;
+    }
+
+    public void dateSet() {
+
+        //Set Date = 25.
+        driver.findElement(By.xpath("//android.widget.NumberPicker[@index='0']")).sendKeys("25");
+        //Set Month = Aug.
+        driver.findElement(By.xpath("//android.widget.NumberPicker[@index='1']")).sendKeys("Aug");
+        //Set Year = 2009.
+        driver.findElement(By.xpath("//android.widget.NumberPicker[@index='2']")).sendKeys("2009");
+        //Click on Done button.
+        driver.findElement(By.id("android:id/button1")).click();
+
     }
 
     public String pageURL(){
