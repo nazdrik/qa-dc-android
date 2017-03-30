@@ -1,5 +1,6 @@
 package scenarios;
 
+import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 import utility.Constants;
 
@@ -37,11 +38,10 @@ public class EnterArrivalsScheduleTests extends TestBase {
         addShipment.oKButtonClick();
         addShipment.approxNumOfItemsFieldFillingIn(addShipment.randomNumber());
         addShipment.inStoreExclusiveUntilClick();
-        addShipment.dateSet();
-
-
-
-
+        addShipment.sleep();
+        driver.findElement(By.xpath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.DatePicker[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.NumberPicker[1]/android.widget.Button[2]")).click();
+        driver.findElement(By.xpath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.DatePicker[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.NumberPicker[2]/android.widget.Button[2]")).click();
+        driver.findElement(By.xpath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.DatePicker[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.NumberPicker[3]/android.widget.Button[1]")).click();
 
 
     }

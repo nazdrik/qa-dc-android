@@ -63,13 +63,20 @@ public class AbstractPage {
     public void dateSet() {
 
         //Set Date = 25.
-        driver.findElement(By.xpath("//android.widget.NumberPicker[@index='0']")).sendKeys("25");
+      //  driver.findElement(By.xpath("//android.widget.NumberPicker[@index='0']")).sendKeys("25");
         //Set Month = Aug.
-        driver.findElement(By.xpath("//android.widget.NumberPicker[@index='1']")).sendKeys("Aug");
+     //   driver.findElement(By.xpath("//android.widget.NumberPicker[@index='1']")).sendKeys("Aug");
         //Set Year = 2009.
-        driver.findElement(By.xpath("//android.widget.NumberPicker[@index='2']")).sendKeys("2009");
+     //   driver.findElement(By.xpath("//android.widget.NumberPicker[@index='2']")).sendKeys("2009");
         //Click on Done button.
-        driver.findElement(By.id("android:id/button1")).click();
+     //   driver.findElement(By.id("android:id/button1")).click();
+      //  driver.findElement(By.xpath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.DatePicker[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.NumberPicker[1]/android.widget.EditText[1]")).click();
+      //  (JavascriptExecutor)driver.executeScript("mobile: swipe", new HashMap<>() {{ put("touchCount", 1); put("startX", 190); put("startY", 572); put("endX",190); put("endY", 319); put("duration", 1); }});
+
+        driver.findElement(By.xpath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.DatePicker[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.NumberPicker[1]/android.widget.Button[2]")).click();
+        driver.findElement(By.xpath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.DatePicker[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.NumberPicker[2]/android.widget.Button[2]")).click();
+        driver.findElement(By.xpath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.DatePicker[1]/android.widget.LinearLayout[1]/android.widget.LinearLayout[1]/android.widget.NumberPicker[3]/android.widget.Button[1]")).click();
+
 
     }
 
