@@ -8,7 +8,7 @@ import org.openqa.selenium.support.FindBy;
  */
 public class MainMenuPage extends AbstractPage {
 
-    @FindBy(id = "com.designcarta.designcarta:id/btnUserOptions")
+    @FindBy(id = "com.designcarta.designcarta.dev:id/btnUserOptions")
     private WebElement logoIcon;
 
     @FindBy(name = "Support")
@@ -24,10 +24,10 @@ public class MainMenuPage extends AbstractPage {
     private WebElement logOutLink;
 
 
-    @FindBy(id = "com.designcarta.designcarta:id/btnYes")
+    @FindBy(id = "com.designcarta.designcarta.dev:id/btnYes")
     private WebElement logOutPopUpOkButton;
 
-    @FindBy(id = "com.designcarta.designcarta:id/btnNo")
+    @FindBy(id = "com.designcarta.designcarta.dev:id/btnNo")
     private WebElement logOutPopUpCancelButton;
 
 

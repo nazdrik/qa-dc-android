@@ -8,43 +8,43 @@ import org.openqa.selenium.support.FindBy;
  */
 public class LoginPage extends AbstractPage {
 
-    @FindBy(id = "com.designcarta.designcarta:id/imgAppLogoTitle")
+    @FindBy(id = "com.designcarta.designcarta.dev:id/imgAppLogoTitle")
     private WebElement appLogo;
 
-    @FindBy(id = "com.designcarta.designcarta:id/btnOk")
+    @FindBy(id = "com.designcarta.designcarta.dev:id/btnOk")
     private WebElement oKButton;
 
-    @FindBy(id = "com.designcarta.designcarta:id/edtLogin")
+    @FindBy(id = "com.designcarta.designcarta.dev:id/edtLogin")
     private WebElement emailTextField;
 
-    @FindBy(id = "com.designcarta.designcarta:id/edtPassword")
+    @FindBy(id = "com.designcarta.designcarta.dev:id/edtPassword")
     private WebElement passwordTextField;
 
-    @FindBy(id = "com.designcarta.designcarta:id/btnPasswordVisibilityChange")
+    @FindBy(id = "com.designcarta.designcarta.dev:id/btnPasswordVisibilityChange")
     private WebElement passwordVisibilityButton;
 
-    @FindBy(id = "com.designcarta.designcarta:id/cbRememberPassword")
+    @FindBy(id = "com.designcarta.designcarta.dev:id/cbRememberPassword")
     private WebElement rememberPasswordSwitcher;
 
-    @FindBy(id = "com.designcarta.designcarta:id/btnLogin")
+    @FindBy(id = "com.designcarta.designcarta.dev:id/btnLogin")
     private WebElement logInButton;
 
-    @FindBy(id = "com.designcarta.designcarta:id/btnForgotPassword")
+    @FindBy(id = "com.designcarta.designcarta.dev:id/btnForgotPassword")
     private WebElement forgotPasswordButton;
 
-    @FindBy(id = "com.designcarta.designcarta:id/btnContactDC")
+    @FindBy(id = "com.designcarta.designcarta.dev:id/btnContactDC")
     private WebElement requestAnAccountButton;
 
-    @FindBy(id = "com.designcarta.designcarta:id/btnActionLeftImage")
+    @FindBy(id = "com.designcarta.designcarta.dev:id/btnActionLeftImage")
     private WebElement closeButton;
 
-    @FindBy(id = "com.designcarta.designcarta:id/txtEmail")
+    @FindBy(id = "com.designcarta.designcarta.dev:id/txtEmail")
     private WebElement forgotPasswordTextField;
 
-    @FindBy(id = "com.designcarta.designcarta:id/btnLeft")
+    @FindBy(id = "com.designcarta.designcarta.dev:id/btnLeft")
     private WebElement cancelButton;
 
-    @FindBy(id = "com.designcarta.designcarta:id/btnRight")
+    @FindBy(id = "com.designcarta.designcarta.dev:id/btnRight")
     private WebElement contactUsButton;
 
 
