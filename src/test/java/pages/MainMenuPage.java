@@ -34,11 +34,17 @@ public class MainMenuPage extends AbstractPage {
 
     public void logoIconClick(){logoIcon.click();}
 
-   public void supportLinkClick(){supportLink.click();}
+    public void supportLinkClick(){supportLink.click();}
 
-   public void termsLinkClick(){termsLink.click();}
+    public Boolean isSupportLinkDisplayed(){return supportLink.isDisplayed();}
+
+    public void termsLinkClick(){termsLink.click();}
+
+    public Boolean isTermsLinkDisplayed(){return termsLink.isDisplayed();}
 
     public void privacyLinkClick(){privacyLink.click();}
+
+    public Boolean isPrivacyLinkDisplayed(){return privacyLink.isDisplayed();}
 
     public void logOutLinkClick(){logOutLink.click();}
 
