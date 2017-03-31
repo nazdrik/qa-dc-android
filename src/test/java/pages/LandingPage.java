@@ -12,7 +12,7 @@ public class LandingPage  extends AbstractPage {
     private WebElement logInButton;
 
     @FindBy(id = "com.designcarta.designcarta.dev:id/btnRequestAccount")
-    private WebElement requestAnAсoount;
+    private WebElement requestAnAсcount;
 
     // @FindBy(id = "com.designcarta.designcarta.dev:id/imageViewLogoTitle")
     // private WebElement logoTitle = (new WebDriverWait(driver, 60)).until(ExpectedConditions.presenceOfElementLocated(By.id("com.designcarta.designcarta:id/imageViewLogoTitle")));
@@ -62,7 +62,11 @@ public class LandingPage  extends AbstractPage {
 
     public void loginButtonClick(){logInButton.click();}
 
-    public void menuIconclick(){menuIcon.click();}
+    public void requestAnAсcountButtonClick(){requestAnAсcount.click();}
+
+    public void menuIconClick(){menuIcon.click();}
 
     public Boolean isLogoDisplayed(){return logoTitle.isDisplayed();}
+
+
 }

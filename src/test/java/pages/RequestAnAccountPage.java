@@ -21,9 +21,26 @@ public class RequestAnAccountPage extends AbstractPage{
     private WebElement companyContactNameField;
 
     @FindBy(id = "com.designcarta.designcarta.dev:id/btnSubmit")
-    private WebElement submitButton;
+    private WebElement submit;
 
     @FindBy(id = "com.designcarta.designcarta.dev:id/btnClose")
-    private WebElement closeButton;
+    private WebElement close;
+
+    @FindBy(id = "com.designcarta.designcarta.dev:id/txtTitle")
+    private WebElement requestTitle;
+
+    public void fillingCompanyNameField(String companyName){companyNameField.sendKeys(companyName);}
+
+    public void fillingCompanyEmailField(String companyEmail){companyEmailField.sendKeys(companyEmail);}
+
+    public void fillingCompanyPhoneField(String companyEmail){companyPhoneField.sendKeys(companyEmail);}
+
+    public void fillingCompanyContactNameField(String companyContact){companyContactNameField.sendKeys(companyContact);}
+
+    public void submitClick(){submit.click();}
+
+    public void closeClick(){close.click();}
+
+    public Boolean isTitlePresents(){return requestTitle.isDisplayed();}
 
 }

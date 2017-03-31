@@ -15,6 +15,14 @@ build
 logfile.log
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
-app/
-out/
-src/test/java/pages/RequestAnAccountPage.java
+
+test-output
+/lib
+out
+logs
+
+target
+*.log
+src/test/resources/configurations.json
+/dog.jpeg
+

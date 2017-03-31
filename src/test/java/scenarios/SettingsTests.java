@@ -21,7 +21,7 @@ public class SettingsTests extends TestBase{
         login.loginButtonClick();
         landing.sleep();
         assertThat("Dealer logs in successfully", landing.isLogoDisplayed(), is(true));
-        landing.menuIconclick();
+        landing.menuIconClick();
         mainMenu.logoIconClick();
         mainMenu.sleep();
         // Check Support link

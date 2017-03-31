@@ -60,6 +60,21 @@ public class AbstractPage {
         return phone;
     }
 
+    public String randomCompany(){
+        Random random = new Random();
+        String number = Integer.toString(random.nextInt(1000));
+        String company = "Company" + number;
+        return company;
+    }
+
+    public String randomName(){
+        Random random = new Random();
+        String number = Integer.toString(random.nextInt(1000));
+        String name = "Name" + number;
+        return name;
+    }
+
+
     public void dateSet() {
 
         //Set Date = 25.

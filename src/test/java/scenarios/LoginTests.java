@@ -21,7 +21,7 @@ public class LoginTests extends TestBase {
         login.loginButtonClick();
         landing.sleep();
         assertThat("Dealer logs in successfully", landing.isLogoDisplayed(), is(true));
-        landing.menuIconclick();
+        landing.menuIconClick();
         mainMenu.logoIconClick();
         mainMenu.sleep();
         mainMenu.logOutLinkClick();
@@ -38,7 +38,7 @@ public class LoginTests extends TestBase {
         login.loginButtonClick();
         landing.sleep();
         assertThat("Designer logs in successfully", landing.isLogoDisplayed(), is(true));
-        landing.menuIconclick();
+        landing.menuIconClick();
         mainMenu.logoIconClick();
         mainMenu.sleep();
         assertThat("LogOut pop up opens", Constants.LOG_OUT_POP_UP_TEXT.contains("Log out"));
@@ -55,7 +55,7 @@ public class LoginTests extends TestBase {
         login.loginButtonClick();
         landing.sleep();
         assertThat("Artist logs in successfully", landing.isLogoDisplayed(), is(true));
-        landing.menuIconclick();
+        landing.menuIconClick();
         mainMenu.logoIconClick();
         mainMenu.sleep();
         assertThat("LogOut pop up opens", Constants.LOG_OUT_POP_UP_TEXT.contains("Log out"));
@@ -72,7 +72,7 @@ public class LoginTests extends TestBase {
         login.loginButtonClick();
         landing.sleep();
         assertThat("Art Consultant logs in successfully", landing.isLogoDisplayed(), is(true));
-        landing.menuIconclick();
+        landing.menuIconClick();
         mainMenu.logoIconClick();
         mainMenu.sleep();
         assertThat("LogOut pop up opens", Constants.LOG_OUT_POP_UP_TEXT.contains("Log out"));
