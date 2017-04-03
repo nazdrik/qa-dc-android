@@ -55,21 +55,21 @@ public class AbstractPage {
 
     public String randomPhone(){
         Random random = new Random();
-        String number = Integer.toString(random.nextInt(1000000));
+        String number = Integer.toString(random.nextInt(10000000));
         String phone = "38066" + number;
         return phone;
     }
 
     public String randomCompany(){
         Random random = new Random();
-        String number = Integer.toString(random.nextInt(1000));
+        String number = Integer.toString(random.nextInt(Integer.MAX_VALUE) + 1);
         String company = "Company" + number;
         return company;
     }
 
     public String randomName(){
         Random random = new Random();
-        String number = Integer.toString(random.nextInt(1000));
+        String number = Integer.toString(random.nextInt(Integer.MAX_VALUE) + 1);
         String name = "Name" + number;
         return name;
     }

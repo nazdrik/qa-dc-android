@@ -29,6 +29,9 @@ public class RequestAnAccountPage extends AbstractPage{
     @FindBy(id = "com.designcarta.designcarta.dev:id/txtTitle")
     private WebElement requestTitle;
 
+    @FindBy(id = "com.designcarta.designcarta.dev:id/btnOk")
+    private WebElement okButton;
+
     public void fillingCompanyNameField(String companyName){companyNameField.sendKeys(companyName);}
 
     public void fillingCompanyEmailField(String companyEmail){companyEmailField.sendKeys(companyEmail);}
@@ -41,6 +44,19 @@ public class RequestAnAccountPage extends AbstractPage{
 
     public void closeClick(){close.click();}
 
+    public void okButtonClick(){okButton.click();}
+
     public Boolean isTitlePresents(){return requestTitle.isDisplayed();}
+
+    public void requestAnAccountFunction(){
+        companyNameField.sendKeys(randomCompany());
+        companyEmailField.sendKeys(randomEmail());
+        companyPhoneField.sendKeys(randomPhone());
+        companyContactNameField.sendKeys(randomName());
+        submit.click();
+
+    }
+
+
 
 }

@@ -1,6 +1,7 @@
 package scenarios;
 
 import org.testng.annotations.Test;
+import utility.Constants;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
@@ -16,11 +17,10 @@ public class RequestAnAccountTests extends TestBase {
         landing.sleep();
         landing.requestAnAсcountButtonClick();
         assertThat("Request an account page opens", requestAnAccount.isTitlePresents(), is(true));
-        requestAnAccount.fillingCompanyContactNameField(requestAnAccount.randomCompany());
-        requestAnAccount.fillingCompanyEmailField(requestAnAccount.randomEmail());
-        requestAnAccount.fillingCompanyPhoneField(requestAnAccount.randomPhone());
-        requestAnAccount.fillingCompanyContactNameField(requestAnAccount.randomName());
-        requestAnAccount.submitClick();
+        requestAnAccount.requestAnAccountFunction();
+        requestAnAccount.sleep();
+        assertThat("Thank you message appears", Constants.THANK_YOU_TEXT.contains("Thank you!"));
+        requestAnAccount.okButtonClick();
 
     }
 
