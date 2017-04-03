@@ -33,19 +33,24 @@ public class MainMenuPage extends AbstractPage {
     @FindBy(id = "com.designcarta.designcarta.dev:id/txtAccountAdmin")
     private WebElement accountAdmin;
 
-    @FindBy(id = "com.designcarta.designcarta.dev:id/btnPostAFind")
+ //   @FindBy(id = "com.designcarta.designcarta.dev:id/btnPostAFind")
+    @FindBy(name = "Post an Item")
     private WebElement postAnItem;
 
     @FindBy(id = "com.designcarta.designcarta.dev:id/btnMyPostedFinds")
+
     private WebElement myPostedItems;
 
-    @FindBy(id = "com.designcarta.designcarta.dev:id/btnViewStoreFront")
+    //@FindBy(id = "com.designcarta.designcarta.dev:id/btnViewStoreFront")
+    @FindBy(name = "View Storefront")
     private WebElement viewStoreFront;
 
-    @FindBy(id = "com.designcarta.designcarta.dev:id/btnEditStoreInfo")
+  //  @FindBy(id = "com.designcarta.designcarta.dev:id/btnEditStoreInfo")
+    @FindBy(name = "Profile info")
     private WebElement profileInfo;
 
-    @FindBy(id = "com.designcarta.designcarta.dev:id/btnNewArrivalsSchedule")
+  //  @FindBy(id = "com.designcarta.designcarta.dev:id/btnNewArrivalsSchedule")
+    @FindBy(name = "Enter Arrivals Schedule")
     private WebElement enterArrivalsSchedule;
 
 

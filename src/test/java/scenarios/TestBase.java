@@ -24,6 +24,7 @@ public class TestBase {
     public EnterArrivalsSchedulePage enterSchedule;
     public AddShipmentPage addShipment;
     public EditShipmentInfoPage editShipment;
+    public MyPostedItemsPage myItems;
 
 
 
@@ -49,6 +50,7 @@ public class TestBase {
         enterSchedule = PageFactory.initElements(driver, EnterArrivalsSchedulePage.class );
         addShipment = PageFactory.initElements(driver, AddShipmentPage.class );
         editShipment = PageFactory.initElements(driver, EditShipmentInfoPage.class );
+        myItems = PageFactory.initElements(driver, MyPostedItemsPage.class );
 
     }
 
