@@ -16,9 +16,7 @@ public class LoginTests extends TestBase {
         //login as a Dealer with correct data
         landing.sleep();
         landing.loginButtonClick();
-        login.fillingEmailTextField(Constants.CORRECT_DEALER_NAME);
-        login.fillingPasswordTextField(Constants.CORRECT_PASSWORD);
-        login.loginButtonClick();
+        login.loginDealerFunctionality();
         landing.sleep();
         assertThat("Dealer logs in successfully", landing.isLogoDisplayed(), is(true));
         landing.menuIconClick();
@@ -33,9 +31,7 @@ public class LoginTests extends TestBase {
         //login as a Designer with correct data
         landing.sleep();
         landing.loginButtonClick();
-        login.fillingEmailTextField(Constants.CORRECT_DESIGNER_NAME);
-        login.fillingPasswordTextField(Constants.CORRECT_PASSWORD);
-        login.loginButtonClick();
+        login.loginDesignerFunctionality();
         landing.sleep();
         assertThat("Designer logs in successfully", landing.isLogoDisplayed(), is(true));
         landing.menuIconClick();
@@ -50,9 +46,7 @@ public class LoginTests extends TestBase {
         //login as a Artist with correct data
         landing.sleep();
         landing.loginButtonClick();
-        login.fillingEmailTextField(Constants.CORRECT_ARTIST_NAME);
-        login.fillingPasswordTextField(Constants.CORRECT_PASSWORD);
-        login.loginButtonClick();
+        login.loginArtistFunctionality();
         landing.sleep();
         assertThat("Artist logs in successfully", landing.isLogoDisplayed(), is(true));
         landing.menuIconClick();
@@ -67,9 +61,7 @@ public class LoginTests extends TestBase {
         //login as a Art Consultant with correct data
         landing.sleep();
         landing.loginButtonClick();
-        login.fillingEmailTextField(Constants.CORRECT_ART_CONSULTACT_NAME);
-        login.fillingPasswordTextField(Constants.CORRECT_PASSWORD);
-        login.loginButtonClick();
+        login.loginConsultantFunctionality();
         landing.sleep();
         assertThat("Art Consultant logs in successfully", landing.isLogoDisplayed(), is(true));
         landing.menuIconClick();

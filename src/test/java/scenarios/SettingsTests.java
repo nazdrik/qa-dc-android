@@ -1,7 +1,6 @@
 package scenarios;
 
 import org.testng.annotations.Test;
-import utility.Constants;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
@@ -16,9 +15,7 @@ public class SettingsTests extends TestBase{
         // Check Settings
         landing.sleep();
         landing.loginButtonClick();
-        login.fillingEmailTextField(Constants.CORRECT_DEALER_NAME);
-        login.fillingPasswordTextField(Constants.CORRECT_PASSWORD);
-        login.loginButtonClick();
+        login.loginDealerFunctionality();
         landing.sleep();
         assertThat("Dealer logs in successfully", landing.isLogoDisplayed(), is(true));
         landing.menuIconClick();
@@ -28,7 +25,7 @@ public class SettingsTests extends TestBase{
         assertThat("Support link is displayed", mainMenu.isSupportLinkDisplayed(), is(true));
         //Check Term of use link
         assertThat("Support link is displayed", mainMenu.isTermsLinkDisplayed(), is(true));
-        //Check Privaci and Policy of use link
+        //Check Privacy and Policy of use link
         assertThat("Support link is displayed", mainMenu.isPrivacyLinkDisplayed(), is(true));
 
     }

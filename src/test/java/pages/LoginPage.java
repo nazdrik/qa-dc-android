@@ -2,6 +2,7 @@ package pages;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import utility.Constants;
 
 /**
  * Created by alexey on 22/03/17.
@@ -72,5 +73,33 @@ public class LoginPage extends AbstractPage {
     public void contactUsButtonClick(){contactUsButton.click();}
 
     public Boolean isContactButtonPresent(){return contactUsButton.isDisplayed();}
+
+    public void loginDealerFunctionality(){
+        loginButtonClick();
+        fillingEmailTextField(Constants.CORRECT_DEALER_NAME);
+        fillingPasswordTextField(Constants.CORRECT_PASSWORD);
+        loginButtonClick();
+    }
+
+    public void loginDesignerFunctionality(){
+        loginButtonClick();
+        fillingEmailTextField(Constants.CORRECT_DESIGNER_NAME);
+        fillingPasswordTextField(Constants.CORRECT_PASSWORD);
+        loginButtonClick();
+    }
+
+    public void loginArtistFunctionality(){
+        loginButtonClick();
+        fillingEmailTextField(Constants.CORRECT_ARTIST_NAME);
+        fillingPasswordTextField(Constants.CORRECT_PASSWORD);
+        loginButtonClick();
+    }
+
+    public void loginConsultantFunctionality(){
+        loginButtonClick();
+        fillingEmailTextField(Constants.CORRECT_ART_CONSULTACT_NAME);
+        fillingPasswordTextField(Constants.CORRECT_PASSWORD);
+        loginButtonClick();
+    }
 
 }

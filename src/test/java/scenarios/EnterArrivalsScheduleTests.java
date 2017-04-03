@@ -14,12 +14,10 @@ public class EnterArrivalsScheduleTests extends TestBase {
 
     @Test(priority = 6, alwaysRun = true)
     public void logInWithValidEmail() throws Exception {
-        //check whether Enter Arrivals Shedule page presented for Dealers
+        //check whether Enter Arrivals schedule page presented for Dealers
         landing.sleep();
         landing.loginButtonClick();
-        login.fillingEmailTextField(Constants.CORRECT_DEALER_NAME);
-        login.fillingPasswordTextField(Constants.CORRECT_PASSWORD);
-        login.loginButtonClick();
+        login.loginDealerFunctionality();
         landing.sleep();
         assertThat("Dealer logs in successfully", landing.isLogoDisplayed(), is(true));
         landing.menuIconClick();
