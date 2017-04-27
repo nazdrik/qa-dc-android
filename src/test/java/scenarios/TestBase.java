@@ -25,6 +25,15 @@ public class TestBase {
     public AddShipmentPage addShipment;
     public EditShipmentInfoPage editShipment;
     public MyPostedItemsPage myItems;
+    public FeaturedArtPage featuredArt;
+    public FeaturedDesignPage featuredDesign;
+    public TimelineFavoritesPage timelineFavorites;
+    public TimelineArtistsPage timelineArtists;
+    public TimelineDealersPage timelineDealers;
+    public SavedItemsPage savedItems;
+    public DealerDirectoryPage dd;
+    public FavoriteDealersListPage favoriteDealers;
+
 
 
 
@@ -51,6 +60,14 @@ public class TestBase {
         addShipment = PageFactory.initElements(driver, AddShipmentPage.class );
         editShipment = PageFactory.initElements(driver, EditShipmentInfoPage.class );
         myItems = PageFactory.initElements(driver, MyPostedItemsPage.class );
+        featuredArt = PageFactory.initElements(driver, FeaturedArtPage.class);
+        featuredDesign = PageFactory.initElements(driver, FeaturedDesignPage.class);
+        timelineFavorites = PageFactory.initElements(driver, TimelineFavoritesPage.class);
+        timelineArtists = PageFactory.initElements(driver, TimelineArtistsPage.class);
+        timelineDealers = PageFactory.initElements(driver, TimelineDealersPage.class);
+        savedItems = PageFactory.initElements(driver, SavedItemsPage.class);
+        dd = PageFactory.initElements(driver, DealerDirectoryPage.class);
+        favoriteDealers = PageFactory.initElements(driver, FavoriteDealersListPage.class);
 
     }
 
