@@ -1,5 +1,4 @@
 package pages;
-
 /**
  * Created by alexey on 27/04/17.
  */

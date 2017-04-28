@@ -1,21 +1,33 @@
 package pages;
 
-import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.TouchAction;
+import io.appium.java_client.android.AndroidDriver;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.RemoteWebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.HashMap;
 import java.util.Random;
 
 /**
  * Created by alexey on 22/03/17.
  */
 public class AbstractPage {
-    protected AppiumDriver driver;
+//    protected AppiumDriver driver;
+//
+//    protected AppiumDriver getDriver() {
+//        return driver;
+//    }
 
-    protected AppiumDriver getDriver() {
-        return driver;
-    }
+    protected static AndroidDriver driver;
+
+
+//    public AbstractPage(AndroidDriver driver) {
+//        this.driver = driver;
+//    }
 
     public void sleep() {
         try {
@@ -120,5 +132,82 @@ public class AbstractPage {
     }
 
 
+    protected void waitForVisibilityOf(By locator) {
+        WebDriverWait wait = new WebDriverWait(driver, 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+    }
+    protected void waitForClickabilityOf(By locator) {
+        WebDriverWait wait = new WebDriverWait(driver, 30);
+        wait.until(ExpectedConditions.elementToBeClickable(locator));
+    }
+    public void scrollPageUp() {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        HashMap<String, Double> swipeObject = new HashMap<String, Double>();
+        swipeObject.put("startX", 0.50);
+        swipeObject.put("startY", 0.95);
+        swipeObject.put("endX", 0.50);
+        swipeObject.put("endY", 0.01);
+        swipeObject.put("duration", 3.0);
+        js.executeScript("mobile: swipe", swipeObject);
+    }
+    public void swipeLeftToRight() {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        HashMap<String, Double> swipeObject = new HashMap<String, Double>();
+        swipeObject.put("startX", 0.01);
+        swipeObject.put("startY", 0.5);
+        swipeObject.put("endX", 0.9);
+        swipeObject.put("endY", 0.6);
+        swipeObject.put("duration", 3.0);
+        js.executeScript("mobile: swipe", swipeObject);
+    }
+    public void swipeRightToLeft() {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        HashMap<String, Double> swipeObject = new HashMap<String, Double>();
+        swipeObject.put("startX", 0.9);
+        swipeObject.put("startY", 0.5);
+        swipeObject.put("endX", 0.01);
+        swipeObject.put("endY", 0.5);
+        swipeObject.put("duration", 3.0);
+        js.executeScript("mobile: swipe", swipeObject);
+    }
+    public void swipeFirstCarouselFromRightToLeft() {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        HashMap<String, Double> swipeObject = new HashMap<String, Double>();
+        swipeObject.put("startX", 0.9);
+        swipeObject.put("startY", 0.2);
+        swipeObject.put("endX", 0.01);
+        swipeObject.put("endY", 0.2);
+        swipeObject.put("duration", 3.0);
+        js.executeScript("mobile: swipe", swipeObject);
+    }
+    public void performTapAction(WebElement elementToTap) {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        HashMap<String, Double> tapObject = new HashMap<String, Double>();
+        tapObject.put("x", (double) 360); // in pixels from left
+        tapObject.put("y", (double) 170); // in pixels from top
+        tapObject.put("element", Double.valueOf(((RemoteWebElement) elementToTap).getId()));
+        js.executeScript("mobile: tap", tapObject);
+    }
+    // Accepts only numbers (key codes 7-16) and lower and upper case letters (key codes 29-54)
+    // Key code 66 is <Enter>
+    public void enterTextInPasswordField(String strTextToEnter) {
+        int intCounter, intKey;
+        for (intCounter = 0; intCounter < strTextToEnter.length(); intCounter++) {
+            intKey = (int) strTextToEnter.charAt(intCounter);
+            if (intKey > 47 && intKey < 58) {
+                intKey = intKey - 41;
+                driver.pressKeyCode(intKey);
+            }
+            else if (intKey > 64 && intKey < 91) {
+                intKey = intKey - 36;
+                driver.pressKeyCode(intKey, 1);
+            }
+            else if (intKey > 96 && intKey < 123) {
+                intKey = intKey - 68;
+                driver.pressKeyCode(intKey);
+            }
+        }
+        driver.pressKeyCode(66);
+    }
 
 }

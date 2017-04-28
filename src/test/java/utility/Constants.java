@@ -25,6 +25,7 @@ public class Constants {
     public static final String FILL_IN_ALL_FIELDS_TEXT = "Please fill in all necessary fields";
     public static final String DELETE_SHIPMENT_INFO_TEXT = "Delete Shipment Info";
     public static final String THANK_YOU_TEXT = "Thank you!";
+    public static final String ONLINE_ITEMS = "Online items";
 
 
 

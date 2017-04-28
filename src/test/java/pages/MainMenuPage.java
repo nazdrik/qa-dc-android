@@ -1,6 +1,5 @@
 package pages;
 
-import io.appium.java_client.TouchAction;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -207,10 +206,5 @@ public class MainMenuPage extends AbstractPage {
         categories.click();
     }
 
-    public TouchAction tap(int x, int y){
-        x = 60;
-        y = 345;
-        return TouchAction tap (60.345);
-    }
 
 }

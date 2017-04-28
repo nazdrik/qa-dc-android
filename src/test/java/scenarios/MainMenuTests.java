@@ -1,5 +1,6 @@
 package scenarios;
 
+import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -43,8 +44,14 @@ public class MainMenuTests extends TestBase {
 //        mainMenu.timelineDealersClick();
 //        timelineDealers.sleep();
 
+        // verify Timeline Feeds
+        driver.findElement(By.xpath(" //android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.support.v4.widget.DrawerLayout[1]/android.widget.RelativeLayout[1]/android.widget.RelativeLayout[1]/android.widget.ExpandableListView[1]/android.widget.LinearLayout[2]/android.widget.TextView[1]")).click();
+        driver.findElement(By.xpath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.support.v4.widget.DrawerLayout[1]/android.widget.RelativeLayout[1]/android.widget.RelativeLayout[1]/android.widget.ExpandableListView[1]/android.widget.LinearLayout[3]/android.widget.TextView[1]")).click();
+        timelineFavorites.sleep();
 
-        mainMenu.timelineClick();
+
+
+
 
     }
 

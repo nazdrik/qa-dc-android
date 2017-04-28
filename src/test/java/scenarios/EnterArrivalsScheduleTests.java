@@ -11,6 +11,7 @@ import static org.hamcrest.core.Is.is;
  */
 public class EnterArrivalsScheduleTests extends TestBase {
 
+
     @Test(priority = 6, alwaysRun = true)
     public void logInWithValidEmail() throws Exception {
         //check whether Enter Arrivals schedule page presented for Dealers

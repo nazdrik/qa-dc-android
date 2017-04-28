@@ -1,7 +1,10 @@
 package pages;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+
+import java.util.HashMap;
 
 /**
  * Created by alexey on 30/03/17.
@@ -84,7 +87,9 @@ public class EnterArrivalsSchedulePage extends AbstractPage {
 //        driver.findElement(By.xpath("//android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.FrameLayout[1]/android.widget.DatePicker[1]/android.widget.LinearLayout[1]/android.widget.ViewAnimator[1]/android.widget.ListView[1]/android.view.View[1]/android.view.View[29]")).sendKeys("29");
 //        driver.findElement(By.id("android:id/button1")).click();
 
-        //       (JavascriptExecutor)driver.executeScript("mobile: tap", new HashMap<String, Double>() {{ put("tapCount", 1.); put("touchCount", 1.); put("duration", 0.5); put("x", 459.); put("y", 869.); }});
+
+
+     //          (JavascriptExecutor)driver.executeScript("mobile: tap", new HashMap<String, Double>() {{ put("tapCount", 1.); put("touchCount", 1.); put("duration", 0.5); put("x", 459.); put("y", 869.); }});
 
 
 //        driver.findElement(By.xpath("//android.widget.NumberPicker[@index='0']")).sendKeys("Jan");
@@ -107,6 +112,16 @@ public class EnterArrivalsSchedulePage extends AbstractPage {
 //        pick.get(1).sendKeys("Mar");
 //        pick.get(2).sendKeys("1989");
 
+//        JavascriptExecutor js = (JavascriptExecutor) dr;
+//        HashMap<String, Double> tapObject = new HashMap<String, Double>();
+//        tapObject.put("x", 12.0);
+//        tapObject.put("y", 345.0);
+//        tapObject.put("duration", 1.0); // Время
+//        tapObject.put("touchCount", 1.0); // Пальцы
+//        tapObject.put("tapCount", 1.0); // Тапы
+//        js.executeScript("mobile: tap", tapObject);
+
+    //    (JavascriptExecutor)driver.executeScript("mobile: tap", new HashMap<String, Double>() {{ put("tapCount", 1.); put("touchCount", 1.); put("duration", 0.5); put("x", 459.); put("y", 869.); }});
 
 
     }
